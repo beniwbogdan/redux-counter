@@ -6,12 +6,12 @@ function App() {
 const dispatch = useDispatch();
 
   const addOne=()=>{
-    dispatch();
+    dispatch({type:"ADD_ONE",payload:1});
 
   }
 
   const minusOne=()=>{
-    dispatch();
+    dispatch({type:"DELETE_ONE",payload:1});
   }
 
   return (
