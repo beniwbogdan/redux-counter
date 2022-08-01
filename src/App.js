@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
 const dispatch = useDispatch();
+const counter = useSelector(elFromInitialState=>elFromInitialState.counter)
 
   const addOne=()=>{
     dispatch({type:"ADD_ONE",payload:1});
