@@ -1,16 +1,17 @@
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 
-function App() {
 
+function App() {
+const dispatch = useDispatch();
 
   const addOne=()=>{
-    
+    dispatch();
 
   }
 
   const minusOne=()=>{
- 
+    dispatch();
   }
 
   return (
