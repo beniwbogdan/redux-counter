@@ -1,11 +1,11 @@
 
-const initialState = {
+const initialCashState = {
     counter: 0,
   }
   
   
 
-export const cashReducer = (state = initialState, action) => {
+export const cashReducer = (state = initialCashState, action) => {
  
     switch (action.type) {
       case "ADD_ONE":

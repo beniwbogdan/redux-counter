@@ -1,20 +1,20 @@
 
-const defaultState ={
-
+const initialCustomerState ={
+customers:[],
 }
 
-export const customerReducer = (state = defaultState, action) => {
+export const customerReducer = (state = initialCustomerState, action) => {
  
     switch (action.type) {
       case "ADD_CUSTOMER":
         return {
-          ...state, counter: state.counter + action.payload
+          ...state, counter: state.customers + action.payload
         }
         case "DELETE_CUSTOMER":
           return {
-            ...state, counter: state.counter - action.payload
+            ...state, counter: state.customers - action.payload
           }
-          default:
+           default:
             return state;
     }
   }
