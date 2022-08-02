@@ -3,34 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Provider} from 'react-redux'
-import {createStore} from "redux"
- 
-
-const initialState = {
-  counter:0,
-}
-
-const reducer=(state= initialState, action)=>{
-  switch(action.type){
-    case "ADD_ONE":
-      return{...state, counter:state.counter+action.payload}
-    case "DELETE_ONE":
-      return{...state, counter:state.counter-action.payload}
-    default:
-      return state;
-  }
-}
-
-let store = createStore(reducer);
-
+import {
+  Provider
+} from 'react-redux'
+import {store} from "./store/index"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App  />
-    </Provider>
+root.render( 
+<React.StrictMode>
+    <Provider store = {store}>
+      <App/>
+    </Provider> 
   </React.StrictMode>
 );
 
